@@ -1,5 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 @import "tailwindcss";
 @plugin "daisyui" {
-    themes: all
+    themes: all;
+    /* Opening a modal adds ascrollbar-gutterto the page to avoid layout shift on operating systems that have a fixed scrollbar.
+    If you don't want to use this feature, you can exclude */
+    exclude: rootscrollgutter;
 }
