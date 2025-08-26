@@ -25,4 +25,10 @@ public class Member
     // so that this does not go back with our Member object, when we serialize our response into JSON from our API controller.
     [ForeignKey(nameof(Id))]
     public AppUser User { get; set; } = null!;
+
+    [JsonIgnore]
+    public List<MemberLike> LikedByMembers { get; set; } = [];
+    
+    [JsonIgnore]
+    public List<MemberLike> LikedMembers { get; set; } = [];
 }
