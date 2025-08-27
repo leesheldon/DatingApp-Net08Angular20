@@ -3,7 +3,6 @@ import { Home } from '../features/home/home';
 import { MemberList } from '../features/members/member-list/member-list';
 import { MemberDetailed } from '../features/members/member-detailed/member-detailed';
 import { Lists } from '../features/lists/lists';
-import { Messages } from '../features/messages/messages';
 import { authGuard } from '../core/guards/auth-guard';
 import { TestErrors } from '../features/test-errors/test-errors';
 import { NotFound } from '../shared/errors/not-found/not-found';
@@ -13,6 +12,7 @@ import { MemberPhotos } from '../features/members/member-photos/member-photos';
 import { MemberMessages } from '../features/members/member-messages/member-messages';
 import { memberResolver } from '../features/members/member-resolver';
 import { preventUnsavedChangesGuard } from '../core/guards/prevent-unsaved-changes-guard';
+import { MessagesList } from '../features/messages/messages-list/messages-list';
 
 export const routes: Routes = [
     {path: '', component: Home},
@@ -36,7 +36,7 @@ export const routes: Routes = [
                 ]
             },
             { path: 'lists', component: Lists },
-            { path: 'messages', component: Messages },
+            { path: 'messages', component: MessagesList },
         ]
     },
     {path: 'errors', component: TestErrors},
