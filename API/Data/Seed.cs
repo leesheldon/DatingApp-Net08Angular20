@@ -1,5 +1,3 @@
-using System.Security.Cryptography;
-using System.Text;
 using System.Text.Json;
 using API.DTOs;
 using API.Entities;
@@ -50,7 +48,8 @@ public class Seed
             user.Member.Photos.Add(new Photo
             {
                 Url = member.ImageUrl!,
-                MemberId = member.Id
+                MemberId = member.Id,
+                IsApproved = true
             });
 
             var result = await userManager.CreateAsync(user, "Pa$$w0rd");
