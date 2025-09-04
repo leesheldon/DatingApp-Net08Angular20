@@ -74,7 +74,7 @@ export class AccountService {
           this.logout()
         }
       });
-    }, 5 * 60 * 1000); // 5 minutes
+    }, 12 * 60 * 60 * 1000); // 12 hour
   }
 
   private getRolesFromToken(user: User): string[] {

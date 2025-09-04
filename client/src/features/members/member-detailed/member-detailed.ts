@@ -40,7 +40,7 @@ export class MemberDetailed implements OnInit {
       filter(event => event instanceof NavigationEnd)
     ).subscribe({
       next: () => {
-        this.title.set(this.route.firstChild?.snapshot?.title)
+        this.title.set(this.route.firstChild?.snapshot?.title);
       }
     });
   }
